@@ -17,3 +17,18 @@ mkdir: para crear carpetas
 man (ver la ayuda de los comando que se de, en este caso touch) touch: para crear archivos Ejemplo: touch papas.yml
 yml: yaml Es un tipo de archivo que se usa conmumente 
 tree: para ver el arbol de carpetas 
+
+Comandos de docker 
+docker ps para ver los contenedores que hay en ejecucion 
+para encontrar paginas se va a docker hub y se busca las imagenes, luego se copea segun el procesador el tag 
+
+docker stop nombre_dela_maquina
+docker start "id o nombre"
+$ docker run -it ubuntu bash: es para correr una imagen directamente desde el contenedor
+$ docker ps -a mostrar contenedores prendidos y apagados
+como nos conectamos a la terminal de un contenedor?
+docker exec -it codigo del contenedor bash
+docker run -d --name
+docker container rm id contenedero es para borrar
+docker images para ver la imagenes
+docker rmi nombre de la imagen para borrar al imagen
