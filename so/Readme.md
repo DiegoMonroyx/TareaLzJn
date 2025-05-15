@@ -3,6 +3,8 @@ Comandos de linux o windows
 
 
 ## Linux 
+
+
 CAT:
 sudo:
 sudo apt update:
@@ -32,3 +34,14 @@ docker run -d --name
 docker container rm id contenedero es para borrar
 docker images para ver la imagenes
 docker rmi nombre de la imagen para borrar al imagen
+docker search ubuntu: 
+docker run -it: activar una consola y quedar dentro de ella 
+docker pull <debian:unstable-slim>:unstable-slim 
+  → Es la etiqueta (tag) que especifica la versión:
+  unstable → es la rama de desarrollo más reciente (no recomendada para producción).
+  slim → es una versión ligera (sin herramientas innecesarias, ideal para contenerizadores minimalistas)
+
+
+
+  ---- docker file de back end y frontend 
+  
