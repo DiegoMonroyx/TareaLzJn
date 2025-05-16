@@ -25,10 +25,16 @@ Docker RUN
 
  docker inspect <codigo del contenedot>
 
+docker run -it <iamgen: version >
+
+# Dockerfile
+
+docker build --pull --rm -f 'docker/dockerfiles/ubuntu-mysql/Dockerfile' -t 'miUbuntuMySQL:1.0.0' 'docker/dockerfiles/ubuntu-mysql'
 
 # Docker Compose 
 
 
+docker compose -f 'docker/docker-compose/mysql-phpmyadmin/docker-compose.yml' up -d --build
  docker compose -f 'dockercompose\database\mysql-phpmyadmin\docker-compose.yml' up -d --build
 
  docker compose -f 'docker/docker-compose/mysql-phpmyadmin/docker-compose.yml' down

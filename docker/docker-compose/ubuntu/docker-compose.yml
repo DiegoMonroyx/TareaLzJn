@@ -1,0 +1,6 @@
+services:
+  ejemplo:
+    image: ubuntu:latest # Reemplaza con la imagen que deseas usar
+    stdin_open: true      # Habilita stdin
+    tty: true             # Asigna un pseudo-terminal
+    command: /bin/bash    # Comando para iniciar un shell interactivo
