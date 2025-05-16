@@ -1,0 +1,7 @@
+services:
+  debian-service:
+    image: debian:latest    # Imagen base de Debian
+    stdin_open: true        # Habilita stdin para interacción
+    tty: true               # Asigna un pseudo-terminal
+    container_name: debian-container # Nombre del contenedor
+    command: /bin/bash      # Inicia un shell interactivo
