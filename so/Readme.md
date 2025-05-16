@@ -60,7 +60,8 @@ docker build --pull --rm -f 'docker/dockerfiles/ubuntu-mysql/Dockerfile' -t 'miU
 # Docker Compose 
 
 
-docker compose -f 'docker/docker-compose/mysql-phpmyadmin/docker-compose.yml' up -d --build
+
+  docker compose -f 'docker/docker-compose/mysql-phpmyadmin/docker-compose.yml' up -d --build
  docker compose -f 'dockercompose\database\mysql-phpmyadmin\docker-compose.yml' up -d --build
 
  docker compose -f 'docker/docker-compose/mysql-phpmyadmin/docker-compose.yml' down
@@ -70,7 +71,13 @@ docker pull <debian:unstable-slim>:unstable-slim
   unstable → es la rama de desarrollo más reciente (no recomendada para producción).
   slim → es una versión ligera (sin herramientas innecesarias, ideal para contenerizadores minimalistas)
 
+apt install -y nginx (sirve para instalar el servidor web nginx dentro de tu contenedor Debian.)
+
+service nginx start
+apt update se utiliza en sistemas basados en Debian (como Debian mismo, Ubuntu, y otros) para actualizar la lista de paquetes disponibles en los repositorios configurados en el sistema.
 
 
   ---- docker file de back end y frontend 
+  
+
   
