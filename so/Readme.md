@@ -76,7 +76,12 @@ apt install -y nginx (sirve para instalar el servidor web nginx dentro de tu con
 service nginx start
 apt update se utiliza en sistemas basados en Debian (como Debian mismo, Ubuntu, y otros) para actualizar la lista de paquetes disponibles en los repositorios configurados en el sistema.
 
-
+ ---db
+ docker build -t pizzapaisa-img .
+ docker run  -d --name pizzapaisa-db -e MYSQL_ROOT_PASSWORD=123456 -e MYSQL_DATABASE=pizzapaisa -p 3306:3306 pizzapaisa-img
+ echo "token" | docker login -u diegojuan1 --password-stdin
+ docker tag pizzapaisa-img diegojuan1/pizzapaisa-db:1.0
+ 
   ---- docker file de back end y frontend 
   
 
