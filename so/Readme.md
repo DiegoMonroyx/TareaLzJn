@@ -81,6 +81,14 @@ apt update se utiliza en sistemas basados en Debian (como Debian mismo, Ubuntu, 
  docker run  -d --name pizzapaisa-db -e MYSQL_ROOT_PASSWORD=123456 -e MYSQL_DATABASE=pizzapaisa -p 3306:3306 pizzapaisa-img
  echo "token" | docker login -u diegojuan1 --password-stdin
  docker tag pizzapaisa-img diegojuan1/pizzapaisa-db:1.0
+
+ --laravel
+ contruir la imagen 
+ docker build -t pizzapaisa-backend .
+ docker network create pizzapaisa-net
+ docker run -d --name pizzapaisa-db --network pizzapaisa-net -e MYSQL_ROOT_PASSWORD=123456 -e MYSQL_DATABASE=pizzapaisa   -p 3306:3306 pizzapaisa-img
+ docker run -d --name pizzapaisa-app --network pizzapaisa-net -p 8000:80 -e DB_HOST=pizzapaisa-db -e DB_DATABASE=pizzapaisa -e DB_USERNAME=root  -e DB_PASSWORD=123456 pizzapaisa-backend
+ docker logs pizzapaisa-app -f
  
   ---- docker file de back end y frontend 
   
