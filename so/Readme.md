@@ -96,6 +96,7 @@ apt update se utiliza en sistemas basados en Debian (como Debian mismo, Ubuntu, 
 backend:8000/api pizzapaisa-frontend
  
   ---- docker file de back end y frontend 
+  docker run -d --name frontend-angular --network pizzapaisa-net -p 4200:4200 pizzapaisa-frontend
   
 
   
