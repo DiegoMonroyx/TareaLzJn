@@ -98,6 +98,9 @@ backend:8000/api pizzapaisa-frontend
   ---- docker file de back end y frontend 
   docker run -d --name frontend-angular --network pizzapaisa-net -p 4200:4200 pizzapaisa-frontend
   docker tag pizzapaisa-frontend diegojuan1/pizzapaisa-frontend:1.0.0
+  sudo docker rmi diegojuan1/pizzapaisa-frontend:1.0.0 diegojuan1/pizzapaisa-backend:2.0 diegojuan1/pizzapaisa-db:2.2 diegojuan1/pizzapaisa-php:1.0.0
+  sudo docker rm 6ada2841e9c9 8e45b48bb47c 6d62fdb2a9a8
+   sudo docker stop 579f66fa5b1c eae8ad27525a 69ddc16a418e
   
 
   
